@@ -6,6 +6,8 @@ module.exports = merge(commonConfig, {
   devtool: 'inline-source-map',
   devServer: {
     port: 3000,
+    allowedHosts: ['vault'],
+    https: false,
     proxy: {
       '/': 'http://django:8000',
     },

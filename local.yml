@@ -5,6 +5,19 @@ volumes:
   papa_local_postgres_data_backups: {}
 
 services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy:alpine
+    container_name: nginx-proxy
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./mkcert:/etc/nginx/certs
+    restart: always
+    depends_on:
+      - django
+
   django: &django
     build:
       context: .
@@ -107,6 +120,9 @@ services:
     command: npm run dev
     ports:
       - '3000:3000'
+    environment:
+      - VIRTUAL_HOST=vault
+      - VIRTUAL_PORT=3000
 # networks:
 #   homelan:
 #     driver: macvlan
