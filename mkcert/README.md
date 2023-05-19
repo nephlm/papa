@@ -1,5 +1,7 @@
 # Installation
 
+Replace vault with whatever name can be properly resolved in your environment and reach your docker host machine.
+
 ```
 sudo apt install libnss3-tools
 curl -JLO "https://dl.filippo.io/mkcert/latest?for=linux/amd64"
@@ -19,3 +21,5 @@ ln -s vault+4.pem vault.crt
 ln -s vault+4-key.pem vault.key
 
 ```
+
+The webpack ux should now be reachable by `https://vault/
