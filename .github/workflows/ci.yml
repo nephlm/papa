@@ -44,6 +44,12 @@ jobs:
       - name: Build the Stack
         run: docker-compose -f local.yml build
 
+      - name: local dir contents
+        run: ls
+
+      - name: local dir location
+        run: pwd
+
       - name: Run DB Migrations
         run: docker-compose -f local.yml run --rm django python manage.py migrate
 
