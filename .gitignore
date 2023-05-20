@@ -279,8 +279,7 @@ papa/media/
 .ipython/
 papa/static/webpack_bundles/
 webpack-stats.json
-.env
-.envs/*
+.envs/.production
 
 
 #### Keys

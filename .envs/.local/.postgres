@@ -1,0 +1,9 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=papa
+POSTGRES_USER=eopelojTuiJuXDcHPFUAxKvxOWswEBba
+POSTGRES_PASSWORD=u4yYeIbF9aqnBXlXB6YZuH2qvH6NJhhZYaEcjy0FZoXkVA7wFbYHLB75hZix7i4F
+
+export $POSTGRES_HOST
